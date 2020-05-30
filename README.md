@@ -43,7 +43,6 @@ El archivo STDIN.o<id_del_proceso> muestra el tiempo de ejecución que tomó el 
 
 ## Análisis de resultados - Versión serial vs Versión paralela
 
-
 | Estimación de matriz de Correlación | Tiempo (s) (Media 6 Iteraciones) Paralelo | Tiempo(Media 6 Iteraciones) Serial |
 | ----------------------------------- | ----------------------------------------- | ---------------------------------- |
 | A = 1000 x 3                        | 0.001333                                  | 0.000554                           |
@@ -53,5 +52,7 @@ El archivo STDIN.o<id_del_proceso> muestra el tiempo de ejecución que tomó el 
 | A = 400.000 x 200                   | 6.209250                                  | 21.079382                          |
 | A = 400.000 x 300                   | 10.342588                                 | 44.705713                          |
 | A = 400.000 x 400                   | 17.881473                                 | 72.440418                          |
+
+En la siguiente gráfica vemos la comparación de los tiempos de ejecución reportados en la tabla 1, cuando la matriz de datos tiene bajas dimensiones, el tiempo de asignación de recursos para cada hilo y el tiempo de espera (join) se convierten en cuello de botella, que hace que incluso el código secuencial tenga un mejor desempeño. Las bondades del paralelismo se evidencian cuando el tamaño de la matriz es lo suficientemente grande, como para que el tiempo empleado en preparar los hilos sea despreciable.
 
 ![Gráfica](/images/grafica1.png)
