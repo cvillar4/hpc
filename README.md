@@ -24,9 +24,9 @@ icpc -xMIC-AVX512 -qopenmp -mkl -std=c++11 -qopt-report=5 -o "app" "paralelo.cc"
 
 Si el archivo no se encuentra en la raíz, debemos ejecutar el siguiente comando:
 
-$ echo "cd <directory>; ./app" | qsub
+$ echo "cd _directory_; ./app" | qsub
 
-donde <directory> es la dirección del folder donde se encuentra el ejecutable.
+donde _directory_ es la dirección del folder donde se encuentra el ejecutable.
 
 Sin embargo, si el archivo no se encuentra en la raíz, el usuario debe ejecutar el siguiente comando:
 
