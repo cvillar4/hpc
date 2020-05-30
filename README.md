@@ -57,6 +57,8 @@ Podemos observar que el tiempo medio al ejecutar 6 iteraciones diferentes por ex
 
 ![Gráfica](/images/grafica1.png)
 
+## Análisis de resultados - Número de hilos utilizados
+
 | Estimación de matriz de Correlación | Tiempo (s) 50 Threads | Tiempo (s) 100 Threads | Tiempo (s) 256 Threads |
 |:-----------------------------------:|:---------------------:|:----------------------:|:----------------------:|
 |             A = 1000 x 3            |        0.000256       |        0.000468        |        0.001333        |
