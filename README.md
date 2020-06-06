@@ -60,15 +60,19 @@ Podemos observar que el tiempo medio al ejecutar 6 iteraciones diferentes por ex
 ## Análisis de resultados - Número de hilos utilizados
 
 | Estimación de matriz de Correlación | Tiempo (s) 50 Threads | Tiempo (s) 100 Threads | Tiempo (s) 256 Threads |
-|:-----------------------------------:|:---------------------:|:----------------------:|:----------------------:|
-|             A = 1000 x 3            |        0.000256       |        0.000468        |        0.001333        |
-|           A = 10.000 x 200          |        0.147657       |        0.131677        |        0.233868        |
-|          A = 100.000 x 200          |        1.605503       |        1.206698        |        1.978789        |
-|          A = 200.000 x 200          |        3.140709       |        2.233002        |        4.003732        |
-|          A = 400.000 x 200          |        5.946018       |        4.448011        |        6.209250        |
-|          A = 400.000 x 300          |       11.610343       |        8.761526        |        10.342588       |
-|          A = 400.000 x 400          |       26.787573       |        18.735705       |        17.881473       |
+| :---------------------------------: | :-------------------: | :--------------------: | :--------------------: |
+|            A = 1000 x 3             |       0.000256        |        0.000468        |        0.001333        |
+|          A = 10.000 x 200           |       0.147657        |        0.131677        |        0.233868        |
+|          A = 100.000 x 200          |       1.605503        |        1.206698        |        1.978789        |
+|          A = 200.000 x 200          |       3.140709        |        2.233002        |        4.003732        |
+|          A = 400.000 x 200          |       5.946018        |        4.448011        |        6.209250        |
+|          A = 400.000 x 300          |       11.610343       |        8.761526        |       10.342588        |
+|          A = 400.000 x 400          |       26.787573       |       18.735705        |       17.881473        |
 
 En la siguiente gráfica vemos la comparación de los tiempos de ejecución reportados en la tabla 2, cuando la matriz de datos tiene bajas dimensiones, el tiempo de asignación de recursos para cada hilo y el tiempo de espera (join) se convierten en cuello de botella, que hace que incluso el código con menos hilos tenga un mejor desempeño. Las bondades del paralelismo se evidencian cuando el tamaño de la matriz es lo suficientemente grande, como para que el tiempo empleado en preparar los hilos sea despreciable.
 
 ![Gráfica](/images/grafica2.png)
+
+Después de que construimos el código y simulamos diferentes matrices A, para hallar la correlación en datos interpretables decidimos utilizar un dataset que el semillero de inteligencia artificial, habia usado para su análisis inicial descriptivo del estudio covid, pero desde la aplicación construida en openmp e intentar replicar la matriz de correlación, (los resultados obtenidos de la salida de c++ se escriben en un fichero y son graficados desde python)
+
+![Gráfica](/images/correlacion.png)

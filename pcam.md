@@ -37,3 +37,9 @@ Esta instrucción permite ejecutar una instrucción sobre múltiples registros e
         for(int j = 0; j < cols ; j++){
             ...
         }
+
+## Proceso PCAM
+
+El proceso PCAM, openmpi para hallar la matriz de correlación se describe a continuación
+
+![Gráfica](/images/pcam.png)
